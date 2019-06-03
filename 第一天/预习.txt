@@ -1,0 +1,13 @@
+预习 
+
+  1.指令 https://cn.vuejs.org/v2/guide/syntax.html#%E6%8C%87%E4%BB%A4
+
+  2.计算属性与侦听器
+
+  3.class与style的绑定
+  
+  4.列表渲染
+
+  5.事件处理
+  
+  6.表单输入绑定
