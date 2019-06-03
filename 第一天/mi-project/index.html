@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米商城 - 小米9、小米MIX 3、红米Note 7，小米电视官方网站</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/iconfont.css">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="header-bar">
+            <div class="header-bar-item">
+                <a class="header-bar-subitem" href="//www.mi.com/index.html">小米商城</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">MIUI</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">loT</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">云服务</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">金融</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">有品</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">小爱开放平台</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">企业团购</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">资质证照</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" href="https://www.miui.com/" target="_blank">协议规则</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem down-item">
+                    <span>下载App</span>
+                    <div class="down-wrap">
+                        <p class="down-arrow"></p>
+                        <img src="images/download.png" alt="">
+                        <div>小米商城APP</div>
+                    </div>
+                </a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" onclick="selectRegionClick()">Select Region</a>
+            </div>
+            <div class="header-bar-item">
+                <a class="header-bar-subitem" onclick="login()">登录</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem" onclick="register()">注册</a>
+                <span class="header-bar-line"></span>
+                <a class="header-bar-subitem">消息通知</a>
+
+                <div class="shop-car-wrap">
+                    <div class="shop-car-count">
+                        <span class="iconfont icon-gouwuche"></span>
+                        <span>购物车</span>
+                        <span>（0）</span>
+                    </div>
+
+
+                    <div class="shop-car-list">
+                        <div class="show-car-empty">购物车中还没有商品，赶紧选购吧！</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 商品分类栏目 -->
+    <section class="search-box">
+        <div class="search-container">
+            <div class="logo-wrap">
+                <img src="images/mi-logo.png" alt="">
+            </div>
+            <div class="search-right">
+                <div class="goods-nav-wrap">
+                    <div class="goods-item-hover">
+                        <div class="goods-item" data-id="phone">小米手机</div>
+                        <div class="goods-item" data-id="redmi">Redmi 红米</div>
+                        <div class="goods-item">电视</div>
+                        <div class="goods-item">笔记本</div>
+                        <div class="goods-item">家电</div>
+                        <div class="goods-item">新品</div>
+                        <div class="goods-item">路由器</div>
+                        <div class="goods-item">智能硬件</div>
+
+                        <!-- 商品内容弹出层 -->
+                        <div class="goods-slide-wrap">
+                            <div class="goods-slide-content" id="goods-slide-content">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="goods-item goods-item-unhover">服务</div>
+                    <div class="goods-item goods-item-unhover">社区</div>
+                </div>
+                <div class="search-wrap">
+                    <input type="text" id="input">
+                    <div class="search-icon-wrap">
+                        <span class="iconfont icon-sousuokuang"></span>
+                    </div>
+
+                    <div class="key-wrap">
+                        <div class="key">小米9</div>
+                        <div class="key">小米9 SE</div>
+                    </div>
+
+
+                    <div class="key-list" id="key-list">
+                        <div class="key-list-item">
+                            <div class="key-list-item-title">小米6x</div>
+                            <div class="key-list-item-subtitle">约6件</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="content">
+        <!-- 轮播内容区域 -->
+
+        <div class="swiper-section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="https://www.mi.com/redmibook14/">
+                            <img src="//i1.mifile.cn/a4/xmad_15590358701464_sEyqY.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="fl swiper-slide">
+                        <a href="https://www.mi.com/redmibook14/">
+                            <img src="//i1.mifile.cn/a4/xmad_15590357922113_dZxos.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mi.com/redmibook14/">
+                            <img src="//i1.mifile.cn/a4/xmad_15590487108559_JOpcA.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mi.com/redmibook14/">
+                            <img src="//i1.mifile.cn/a4/xmad_15586683348207_opnBm.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mi.com/redmibook14/">
+                            <img src="//i1.mifile.cn/a4/xmad_15590297188488_lNBWg.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 后退前进按钮 -->
+                <div class="swiper-button-prev my-swiper-prev"></div>
+                <!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+                <div class="swiper-button-next my-swiper-next"></div>
+                <!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- 遮罩弹窗 -->
+    <div class="overlay" onclick="overlayClick()"></div>
+    <!-- 地区弹窗 -->
+    <div class="region-wrap">
+        <div class="region-title-wrap">
+            <div>Select Region</div>
+            <span class="iconfont icon-close" onclick="overlayClick()"></span>
+        </div>
+        <div class="region-content">
+            <h3 class="region-title">Welcome to Mi.com</h3>
+            <p class="region-subtitle">Please select your country or region</p>
+            <div class="region-button-wrap">
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+                <a class="region-button">Hong Kong</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,33 @@
+{
+    "keys": [{
+        "name":"小米6X",
+        "count":6
+    },{
+        "name":"小米MIX 2S",
+        "count":5
+    },{
+        "name":"黑鲨游戏手机",
+        "count":3
+    },{
+        "name":"红米Note 5",
+        "count":6
+    },{
+        "name":"红米5A",
+        "count":13
+    },{
+        "name":"小米电视4C",
+        "count":5
+    },{
+        "name":"电视32英寸",
+        "count":3
+    },{
+        "name":"笔记本pro",
+        "count":5
+    },{
+        "name":"空气净化器",
+        "count":11
+    },{
+        "name":"净水器",
+        "count":8
+    }]
+}
