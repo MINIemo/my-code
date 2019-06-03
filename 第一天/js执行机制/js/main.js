@@ -11,13 +11,13 @@ setTimeout(() => {
 new Promise(function (resolve, reject) {
     console.log(2);
 
+    resolve();
+
     for (let i = 0; i < 999999999; i++) {
         if (i === 10000000) {
             console.log(7);
         }
     }
-
-    resolve();
 
     console.log(4);
 }).then(() => {
