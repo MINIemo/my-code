@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+
+<body>
+
+
+    <div id="app">
+
+        <!-- 插值语法 {{ js表达式 }} -->
+        <!-- 作用：将 Vue实例中的 data数据 绑定到模板中，会将数据 解析为 普通文本 -->
+
+        {{title}}
+
+        <h1>{{title+'hello world'.split('').reverse().join('')}}</h1>
+
+        <h1>{{obj.name}}</h1>
+
+        <p>{{arr[2]+3*100}}</p>
+
+        <h1>{{flag?'hello':'world'}}</h1>
+
+    </div>
+
+
+
+
+    <!-- 被 Vue框架处理成下面这样 -->
+    <!-- <div id="app">
+
+        我是标题
+
+    </div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+
+</html>
