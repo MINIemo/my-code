@@ -4,13 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>class与style的绑定</title>
+    <style>
+        .p3 {
+            color: red;
+        }
+
+        .p4 {
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
 
     <div id="app">
 
-        
+        <p class="p1 p2" :class='{p3:false,p4:true}'>我是一段内容1</p>
+        <p class="p1 p2" :class='classObj1'>我是一段内容2</p>
+
+        <p class="p1 p2" :class='classArray1'>我是一段内容2</p>
+
+        <h1 :style='styleObj1'>我是一级标题</h1>
+
+        <h2 :style='[styleObj1,styleObj2]'>我是二级标题</h2>
+
+        <h3 :style='{display:["-webkit-flex","-ms-flex","flex"]}'>我是三级标题</h3>
 
     </div>
 
