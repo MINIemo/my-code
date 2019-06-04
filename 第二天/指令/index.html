@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>指令</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1 v-if='flag'>我是一级标题</h1>
+
+        <h3 v-else-if='type === "A"'>我是三级标题111</h3>
+        <h3 v-else-if='type === "B"'>我是三级标题222</h3>
+        <h3 v-else-if='type === "C"'>我是三级标题333</h3>
+        <h3 v-else-if='type === "D"'>我是三级标题444</h3>
+
+        <h2 v-else>我是二级标题</h2>
+
+
+        <h1 v-show='flag2'>我是标题</h1>
+
+
+        <div v-show='flag'>
+            <h1>我是标题</h1>
+            <ul>
+                <li>
+                    我是列表1
+                </li>
+                <li>
+                    我是列表1
+                </li>
+                <li>
+                    我是列表1
+                </li>
+                <li>
+                    我是列表1
+                </li>
+            </ul>
+            <dl>
+                <dt>我是标题</dt>
+                <dd>我是内容</dd>
+            </dl>
+        </div>
+
+
+        <h1 v-once>{{title}}</h1>
+
+
+    </div>
+
+
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+
+</html>
