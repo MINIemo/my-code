@@ -34,6 +34,10 @@ const vm = new Vue({
         getPerson() {
             console.log(3);
             return `${this.name}今年${this.age}岁`;
+        },
+
+        isShow() {
+            return this.name === 'Steel';
         }
     }
 });
