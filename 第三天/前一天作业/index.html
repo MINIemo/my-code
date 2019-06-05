@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>作业</title>
+    <title>前一天作业</title>
     <style>
         * {
             margin: 0;
@@ -57,11 +57,11 @@
         }
 
         .finish {
-            background-color: chocolate;
+            background-color: #42b983;
         }
 
         .unfinish {
-            background-color: #42b983;
+            background-color: chocolate;
         }
     </style>
 </head>
@@ -71,25 +71,11 @@
     <div id="app">
 
         <ul>
-            <li class="item">
-                <span class="fl title finish">我是列表项1</span>
+            <li v-for='(item,index) of list' class="item">
+                <span :class='{finish:item.isDone,unfinish:!item.isDone}' class="fl title">{{item.title}}</span>
                 <p class="fr">
-                    <button>完成</button>
-                    <button class="del">删除</button>
-                </p>
-            </li>
-            <li class="item">
-                <span class="fl title finish">我是列表项1</span>
-                <p class="fr">
-                    <button>完成</button>
-                    <button class="del">删除</button>
-                </p>
-            </li>
-            <li class="item">
-                <span class="fl title finish">我是列表项1</span>
-                <p class="fr">
-                    <button>完成</button>
-                    <button class="del">删除</button>
+                    <button @click='setStatus(index)'>{{item.isDone?'完成':'未完成'}}</button>
+                    <button @click='del(index)' class="del">删除</button>
                 </p>
             </li>
         </ul>
