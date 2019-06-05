@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            margin: 60px auto;
+            border: 1px solid red;
+            padding: 30px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        button {
+            width: 70px;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #42b983;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .item {
+            border: 1px solid gray;
+            padding: 15px;
+            margin: 8px 0;
+            color: #fff;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+            overflow: hidden;
+        }
+
+        .item .del {
+            background-color: chocolate;
+        }
+
+        .item .title {
+            line-height: 37px;
+            padding: 0 15px;
+            border-radius: 5px;
+        }
+
+        .finish {
+            background-color: chocolate;
+        }
+
+        .unfinish {
+            background-color: #42b983;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <ul>
+            <li class="item">
+                <span class="fl title finish">我是列表项1</span>
+                <p class="fr">
+                    <button>完成</button>
+                    <button class="del">删除</button>
+                </p>
+            </li>
+            <li class="item">
+                <span class="fl title finish">我是列表项1</span>
+                <p class="fr">
+                    <button>完成</button>
+                    <button class="del">删除</button>
+                </p>
+            </li>
+            <li class="item">
+                <span class="fl title finish">我是列表项1</span>
+                <p class="fr">
+                    <button>完成</button>
+                    <button class="del">删除</button>
+                </p>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+
+</html>
