@@ -11,8 +11,23 @@
     <div id="app">
 
         <!-- 表单输入绑定的修饰符 -->
+        <!-- v-model的修饰符 -->
 
+        <!-- lazy：默认情况下数据是在 表单 input事件触发后 同步的 -->
+        <!-- 使用 lazy之后，数据同步 按照 change事件 -->
+        <input v-model.lazy='msg' type="text">
+        <h1>{{msg}}</h1>
 
+        <!-- .number：将用户的输入值转换为 数值类型，如果输入值无法转换，保持原始值 -->
+        <input v-model.number='num' type="text">
+        <h1>{{typeof num}}</h1>
+
+        <!-- .trim：将用户输入的值的 首尾空白字符去掉 -->
+        <input v-model.trim='str' type="text">
+        <h1>{{str}}</h1>
+
+        <input v-model.lazy.trim.number='str1' type="text">
+        <h1>{{str1}}</h1>
     </div>
 
 
