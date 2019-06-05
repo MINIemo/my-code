@@ -10,7 +10,48 @@
 
     <div id="app">
 
+        <ul>
+            <!-- item 只能在 应用 v-for指令的 DOM元素内访问 -->
+            <li v-for='(item,index) of arr'>
+                {{item}}--{{index}}
+            </li>
+        </ul>
+        <!-- <h1>{{item}}</h1> -->
 
+        <ul>
+            <li v-for='(item,index) of arr1' v-show='item.age>18'>
+                {{item.name}}--{{item.age}}--{{index}}
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for='item of getArr'>
+                {{item.name}}--{{item.age}}
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for='(value,key,index) of obj'>
+                {{value}}--{{key}}--{{index}}
+            </li>
+        </ul>
+
+        <!-- 也可以遍历 一段取值范围 -->
+        <ul>
+            <li v-for='n of 10'>
+                {{n}}
+            </li>
+        </ul>
+
+
+
+        <ul>
+            <li v-for='(item,index) of arr2'>
+                {{item.name}}
+                <button @click='del(index)'>删除</button>
+            </li>
+        </ul>
+        <button @click='modify'>修改</button>
     </div>
 
 
