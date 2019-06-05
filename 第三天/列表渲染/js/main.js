@@ -51,26 +51,19 @@ const vm = new Vue({
     },
     methods: {
         modify() {
-            // 只有调用数组的 变异方法(会改变原数组的方法) Vue才可以检测到变化
+            // 只有调用数组的 变异方法(会改变原数组的方法)和替换数组 Vue才可以检测到变化
             // this.arr2.push({
             //     name: '小王',
             //     age: 40
             // });
 
-            this.arr2.splice(1, 1);
+            // this.arr2.splice(1, 1);
 
             // this.arr2.pop();
 
-            this.arr2 = [
-                {
-                    name: '小红',
-                    age: 18
-                },
-                {
-                    name: '小军',
-                    age: 30
-                }
-            ];
+            // this.arr2 = this.arr2.filter(item => item.age > 18);
+
+            this.arr2[1].name = '小黄';
         },
         del(index) {
             this.arr2.splice(index, 1);
