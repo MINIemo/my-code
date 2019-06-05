@@ -60,6 +60,17 @@ const vm = new Vue({
             this.arr2.splice(1, 1);
 
             // this.arr2.pop();
+
+            this.arr2 = [
+                {
+                    name: '小红',
+                    age: 18
+                },
+                {
+                    name: '小军',
+                    age: 30
+                }
+            ];
         },
         del(index) {
             this.arr2.splice(index, 1);
