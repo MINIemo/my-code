@@ -9,7 +9,20 @@
 <body>
 
     <div id="app">
-        
+
+        <h1>{{count}}</h1>
+
+        <button @click.ctrl.prevent='increase(1200,$event)'>增加</button>
+
+        <!-- 指令修饰符可以串联 -->
+        <a @click.once.prevent='increase(1200,$event)' href="https://www.baidu.com">百度一下</a>
+
+        <!-- 提供按键名称或者按键码 -->
+        <input @keyup.13='increase(1200,$event)' type="text">
+        <input @keyup.enter='increase(1200,$event)' type="text">
+
+        <!-- 系统按键：ctrl，alt，shift，meta -->
+
     </div>
 
 
