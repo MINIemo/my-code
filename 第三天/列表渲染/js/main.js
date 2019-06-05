@@ -51,7 +51,7 @@ const vm = new Vue({
     },
     methods: {
         modify() {
-            // 只有调用数组的 变异方法(会改变原数组的方法) Vue才可以监听到变化
+            // 只有调用数组的 变异方法(会改变原数组的方法) Vue才可以检测到变化
             // this.arr2.push({
             //     name: '小王',
             //     age: 40
