@@ -12,7 +12,7 @@ const vm = new Vue({
     },
     methods: {
         increase(val, e) {
-            // 当没有任何参数时，默认会把事件对象传过来，否则需要显示传递事件对象（通过$event）
+            // 当没有任何参数时，默认会把事件对象传过来，否则需要显示传递事件对象（在模板中通过$event）
             console.log(val, e);
 
             this.count++;
