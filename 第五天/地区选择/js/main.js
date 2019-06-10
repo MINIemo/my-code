@@ -140,11 +140,13 @@ const vm = new Vue({
     },
     computed: {
         getCity() {
+            console.log('getCity');
             const cityList = this.province.filter(item => item.provinceId === this.select1)[0].city;
             this.select2 = cityList[0].cityId;
             return cityList;
         },
         getArea() {
+            console.log('getArea');
             const areaList = this.getCity.filter(item => item.cityId === this.select2)[0].area;
             this.select3 = areaList[0].areaId;
             return areaList;
