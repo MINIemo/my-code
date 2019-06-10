@@ -2,7 +2,7 @@
 const vm = new Vue({
     el: '#app',
     data: {
-        select1: '2',
+        select1: '',
         select2: '',
         select3: '',
         province: [
@@ -148,6 +148,14 @@ const vm = new Vue({
             const areaList = this.getCity.filter(item => item.cityId === this.select2)[0].area;
             this.select3 = areaList[0].areaId;
             return areaList;
+        }
+    },
+    watch: {
+        province: {
+            handler() {
+                this.select1 = this.province[0].provinceId;
+            },
+            immediate: true
         }
     }
 });
