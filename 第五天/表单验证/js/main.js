@@ -32,12 +32,8 @@ const vm = new Vue({
     computed: {
         verification() {
             const obj = {};
-            if (this.user.username) {
-                obj.username = !reg.username.test(this.user.username);
-            }
-            if (this.user.email) {
-                obj.email = !reg.email.test(this.user.email);
-            }
+            obj.username = this.user.username && !reg.username.test(this.user.username);
+            obj.email = this.user.email && !reg.email.test(this.user.email);
             return obj;
         }
     },
