@@ -10,9 +10,9 @@
 <body>
     <div id="app">
         <p class="desc">
-            <input type="text" placeholder="请输入待办事项内容..." />
-            <button>添加</button>
-            <select>
+            <input v-model.trim='backlog' type="text" placeholder="请输入待办事项内容..." />
+            <button @click='add'>添加</button>
+            <select v-model='select'>
                 <option value="1">全部</option>
                 <option value="2">已完成</option>
                 <option value="3">未完成</option>
@@ -20,48 +20,20 @@
         </p>
         <div class="desc">
             <p>
-                共<span class="count">3</span>条
-                已完成：<span class="count">1</span>条
-                未完成：<span class="count">2</span>条
+                共<span class="count">{{list.length}}</span>条
+                已完成：<span class="count">{{getFinish}}</span>条
+                未完成：<span class="count">{{list.length-getFinish}}</span>条
             </p>
         </div>
-        <ul class="descul">
-            <li>
-                <span class="span1">待办事项1</span>
-                <!-- <input v-if='item.isEdit' v-model='editValue' type="text" /> -->
+        <ul v-if='list.length' class="descul">
+            <li v-for='(item,index) of getFilterList'>
+                <span class="span1">{{item.title}}</span>
+                <!-- <input type="text" /> -->
                 <label>
-                    <span class='finished'>已完成</span>
-                    <input type="checkbox" />
+                    <span :class='[item.isFinish?"finished":"unfinished"]'>{{item.isFinish?'已完成':'未完成'}}</span>
+                    <input v-model='item.isFinish' type="checkbox" />
                 </label>
-                <button>删除</button>
-                <button>编辑</button>
-                <!-- <p v-if='item.isEdit'>
-                    <button>保存</button>
-                    <button>取消编辑</button>
-                </p> -->
-            </li>
-            <li>
-                <span class="span1">待办事项2</span>
-                <!-- <input v-if='item.isEdit' v-model='editValue' type="text" /> -->
-                <label>
-                    <span class='finished'>已完成</span>
-                    <input type="checkbox" />
-                </label>
-                <button>删除</button>
-                <button>编辑</button>
-                <!-- <p v-if='item.isEdit'>
-                    <button>保存</button>
-                    <button>取消编辑</button>
-                </p> -->
-            </li>
-            <li>
-                <span class="span1">待办事项3</span>
-                <!-- <input v-if='item.isEdit' v-model='editValue' type="text" /> -->
-                <label>
-                    <span class='finished'>已完成</span>
-                    <input type="checkbox" />
-                </label>
-                <button>删除</button>
+                <button @click='del(index)'>删除</button>
                 <button>编辑</button>
                 <!-- <p v-if='item.isEdit'>
                     <button>保存</button>
@@ -69,6 +41,7 @@
                 </p> -->
             </li>
         </ul>
+        <p v-else>没有任何数据！</p>
     </div>
 
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
